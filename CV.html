@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Japanese Style CV (Rirekisho)</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12pt;
+      margin: 40px;
+      background-color: white;
+      color: black;
+    }
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 25px;
+    }
+
+    td, th {
+      border: 1px solid black;
+      padding: 6px 8px;
+      vertical-align: top;
+    }
+
+    th {
+      width: 25%;
+      text-align: left;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      resize: none;
+      outline: none;
+    }
+
+    .photo {
+      width: 120px;
+      height: 160px;
+      border: 1px solid black;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10pt;
+    }
+
+    .section-title {
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Curriculum Vitae (Japanese Style)</h1>
+
+  <table>
+    <tr>
+      <th>Full Name</th>
+      <td><input type="text" placeholder="Enter full name"></td>
+      <td rowspan="4" class="photo">Photo<br>(Attach here)</td>
+    </tr>
+    <tr>
+      <th>Date of Birth</th>
+      <td><input type="text" placeholder="YYYY / MM / DD"></td>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <td><input type="text" placeholder="Male / Female / Other"></td>
+    </tr>
+    <tr>
+      <th>Address</th>
+      <td><textarea rows="2" placeholder="Enter full address"></textarea></td>
+    </tr>
+    <tr>
+      <th>Phone Number</th>
+      <td colspan="2"><input type="text" placeholder="Enter phone number"></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td colspan="2"><input type="text" placeholder="Enter email"></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr><th colspan="3" class="section-title">Education</th></tr>
+    <tr>
+      <th>Date (Year / Month)</th>
+      <th>Institution</th>
+      <th>Remarks</th>
+    </tr>
+    <tr>
+      <td><input type="text" placeholder="YYYY / MM"></td>
+      <td><input type="text" placeholder="Name of institution"></td>
+      <td><input type="text" placeholder="Enrolled / Graduated"></td>
+    </tr>
+    <tr>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr><th colspan="3" class="section-title">Work Experience</th></tr>
+    <tr>
+      <th>Date (Year / Month)</th>
+      <th>Company / Organization</th>
+      <th>Position / Details</th>
+    </tr>
+    <tr>
+      <td><input type="text" placeholder="YYYY / MM"></td>
+      <td><input type="text" placeholder="Company name"></td>
+      <td><input type="text" placeholder="Position / Role"></td>
+    </tr>
+    <tr>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr>
+      <td colspan="3" style="text-align: center;">(End) — above is the work history —</td>
+    </tr>
+  </table>
+
+  <table>
+    <tr><th colspan="2" class="section-title">Qualifications / Licenses</th></tr>
+    <tr>
+      <th>Date (Year / Month)</th>
+      <th>Qualification Name</th>
+    </tr>
+    <tr>
+      <td><input type="text" placeholder="YYYY / MM"></td>
+      <td><input type="text" placeholder="e.g. JLPT N2, TOEIC 850"></td>
+    </tr>
+    <tr>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr><th class="section-title">Reason for Application / Personal Statement</th></tr>
+    <tr>
+      <td><textarea rows="5" placeholder="Write your reason for applying, goals, and self-introduction"></textarea></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr><th colspan="2" class="section-title">Additional Information</th></tr>
+    <tr>
+      <th>Commute Time</th>
+      <td><input type="text" placeholder="e.g. 30 minutes"></td>
+    </tr>
+    <tr>
+      <th>Dependents</th>
+      <td><input type="text" placeholder="e.g. 2"></td>
+    </tr>
+    <tr>
+      <th>Health</th>
+      <td><input type="text" placeholder="e.g. Good / Excellent"></td>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <td><input type="text" placeholder="YYYY / MM / DD"></td>
+    </tr>
+    <tr>
+      <th>Signature</th>
+      <td><input type="text" placeholder="Your full name (signature)"></td>
+    </tr>
+  </table>
+
+</body>
+</html>
