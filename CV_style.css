@@ -1,0 +1,108 @@
+body {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12pt;
+      margin: 20px;
+      background-color: white;
+      color: black;
+    }
+
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14pt;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      table-layout: fixed; /* equal width columns */
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 6px 8px;
+      vertical-align: top;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    th {
+      width: 25%;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      resize: none;
+      outline: none;
+    }
+
+    .photo {
+      width: 150px;
+      height: 200px;
+      border: 1px solid black;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 10pt;
+    }
+
+    .section-title {
+      background-color: #eaeaea;
+      text-align: center;
+    }
+
+    .tech-skills th, .tech-skills td {
+      text-align: center;
+    }
+
+    .ref-box {
+      width: 48%;
+      border: 1px solid black;
+      padding: 8px;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    }
+
+
+
+    /* ===== Mobile ===== */
+    @media (max-width: 600px) {
+      body {
+        font-size: 11pt;
+        margin: 10px;
+      }
+
+      th, td {
+        padding: 4px 6px;
+        font-size: 11pt;
+      }
+
+      /* Make photo stack above on mobile */
+      td.photo {
+        display: block;
+        width: 120px;
+        height: 160px;
+        margin: 0 auto 10px auto;
+      }
+      td[rowspan] {
+        display: block;
+      }
+
+      /* References stack vertically */
+      .ref-box {
+        width: 100%;
+      }
+    }
