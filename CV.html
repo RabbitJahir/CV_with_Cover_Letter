@@ -9,7 +9,7 @@
     body {
       font-family: "Times New Roman", Times, serif;
       font-size: 12pt;
-      margin: 40px;
+      margin: 20px;
       background-color: white;
       color: black;
     }
@@ -17,25 +17,33 @@
     h1 {
       text-align: center;
       text-transform: uppercase;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14pt;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 25px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      table-layout: fixed; /* equal width columns */
     }
 
-    td, th {
+    th, td {
       border: 1px solid black;
-      padding: 8px 10px;
+      padding: 6px 8px;
       vertical-align: top;
+      text-align: left;
+      word-wrap: break-word;
     }
 
     th {
       width: 25%;
-      text-align: left;
     }
 
     input, textarea {
@@ -61,6 +69,10 @@
       text-align: center;
     }
 
+    .tech-skills th, .tech-skills td {
+      text-align: center;
+    }
+
     .ref-box {
       width: 48%;
       border: 1px solid black;
@@ -68,20 +80,38 @@
       display: inline-block;
       vertical-align: top;
       box-sizing: border-box;
+      margin-bottom: 10px;
       box-shadow: 0 0 4px rgba(0,0,0,0.1);
     }
 
-    .tech-skills {
-  width: 100%;
-  table-layout: fixed; /* makes all columns equal width */
-}
+    /* ===== Mobile ===== */
+    @media (max-width: 600px) {
+      body {
+        font-size: 11pt;
+        margin: 10px;
+      }
 
-.tech-skills th, .tech-skills td {
-  border: 1px solid black;
-  padding: 8px;
-  text-align: center;
-}
+      th, td {
+        padding: 4px 6px;
+        font-size: 11pt;
+      }
 
+      /* Make photo stack above on mobile */
+      td.photo {
+        display: block;
+        width: 120px;
+        height: 160px;
+        margin: 0 auto 10px auto;
+      }
+      td[rowspan] {
+        display: block;
+      }
+
+      /* References stack vertically */
+      .ref-box {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -155,31 +185,30 @@
   </table>
 
   <table class="tech-skills">
-  <tr><th colspan="5" class="section-title">Technical Skills</th></tr>
-  <tr>
-    <th>Language</th>
-    <th>Web</th>
-    <th>Database</th>
-    <th>Tools</th>
-    <th>Concepts</th>
-  </tr>
-  <tr>
-    <td>C</td><td>HTML</td><td>Firebase</td><td>Zed</td><td>AI</td>
-  </tr>
-  <tr>
-    <td>JS</td><td>JS</td><td>Vercel</td><td>Github/Git</td><td>Database</td>
-  </tr>
-  <tr>
-    <td>Python</td><td>CSS</td><td>Netlify</td><td>Visual Code</td><td>Creativity</td>
-  </tr>
-</table>
-
+    <tr><th colspan="5" class="section-title">Technical Skills</th></tr>
+    <tr>
+      <th>Language</th>
+      <th>Web</th>
+      <th>Database</th>
+      <th>Tools</th>
+      <th>Concepts</th>
+    </tr>
+    <tr>
+      <td>C</td><td>HTML</td><td>Firebase</td><td>Zed</td><td>AI</td>
+    </tr>
+    <tr>
+      <td>JS</td><td>JS</td><td>Vercel</td><td>Github/Git</td><td>Database</td>
+    </tr>
+    <tr>
+      <td>Python</td><td>CSS</td><td>Netlify</td><td>Visual Code</td><td>Creativity</td>
+    </tr>
+  </table>
 
   <table>
     <tr><th colspan="2" class="section-title">Projects</th></tr>
     <tr>
       <th>Class Room</th>
-      <td>Made a website with a editable calendar and our 1st semester studies</td>
+      <td>Made a website with an editable calendar and our 1st semester studies</td>
     </tr>
   </table>
 
@@ -234,9 +263,9 @@
     </tr>
   </table>
 
-  <h2 style="text-align:center; margin-top:40px; font-size:14pt;">References</h2>
+  <h2>References</h2>
 
-  <div style="display:flex; justify-content:space-between; gap:4%;">
+  <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:4%;">
     <div class="ref-box">
       <p><strong>Name:</strong> ______________________</p>
       <p><strong>Designation:</strong> ___________________</p>
@@ -253,6 +282,9 @@
       <p><strong>Email:</strong> _______________________</p>
     </div>
   </div>
+
+  <br><br>
+  <a href="index.html">Back to Cover Letter</a>
 
 </body>
 </html>
